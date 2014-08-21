@@ -1,0 +1,7 @@
+<%= form_for :bad_phrase, :as => :post, :url => bad_phrases_path do |f| %>
+  <div>
+    <%= f.label :value, 'Bad Prase' %>
+    <%= f.text_field :value %>
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<ul>Mappings
+  <%= form_tag purge_admin_mappings_path do %>
+    <% @mappings.each do |mapping| %>
+      <li>
+        <%= check_box_tag 'ids[]', mapping.id %>
+        <%= mapping.bad_phrase.value %> => <%= mapping.good_phrase.value %>
+      </li>
+    <% end %>
+    <%= submit_tag 'purge!!' %>
+  <% end %>
+</ul>

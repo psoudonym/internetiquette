@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140821214715) do
   create_table "mappings", force: true do |t|
     t.integer  "bad_phrase_id"
     t.integer  "good_phrase_id"
-    t.boolean  "approved"
+    t.boolean  "approved",       default: false
     t.integer  "approver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20140821214715) do
 
   create_table "phrases", force: true do |t|
     t.string   "value"
-    t.boolean  "approved"
+    t.boolean  "approved",           default: false
     t.integer  "approver_id"
-    t.boolean  "positive_sentiment", default: false
+    t.boolean  "positive_sentiment", default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

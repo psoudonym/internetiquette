@@ -9,8 +9,8 @@ class MappingsController < ApplicationController
   def create
 
     begin
-      bad_phrase  = Phrase.negative.where(:value => params[:mapping][:bad_phrase]).first_or_create!
-      good_phrase = Phrase.positive.where(:value => params[:mapping][:good_phrase]).first_or_create!
+      bad_phrase  = Phrase.where(:value => params[:mapping][:bad_phrase], :positive_sentiment => false).first_or_create!
+      good_phrase = Phrase.where(:value => params[:mapping][:good_phrase], :positive_sentiment => true).first_or_create!
       mapping     = Mapping.create! :bad_phrase_id => bad_phrase.id, :good_phrase_id => good_phrase.id 
       flash[:sucess] = "Your contribution has been noted, and we thank you for your assitance in the endevaor"
       redirect_to root_path

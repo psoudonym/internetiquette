@@ -8,10 +8,11 @@
 </head>
 <body>
 
-  <ul>
-    <li><%= link_to 'admin', '/admin' %></li>
-    <li><%= link_to 'new mapping', new_mapping_path %></li>
-    <li><%= link_to 'new bad phrases', new_bad_phrase_path%></li>
+  <h1>ADMIN</h1>
+  <ul>admin menu
+    <li><%= link_to 'good phrases', admin_good_phrases_path %></li>
+    <li><%= link_to 'bad phrases', admin_bad_phrases_path %></li>
+    <li><%= link_to 'mappings', admin_mappings_path %></li>
   </ul>
 
   <%= render :partial => '/layouts/flash' %>
