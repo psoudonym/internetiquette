@@ -11,30 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821210506) do
+ActiveRecord::Schema.define(version: 20140821214715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bad_phrases", force: true do |t|
-    t.string   "value"
-    t.boolean  "approved"
-    t.integer  "approver_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "good_phrases", force: true do |t|
-    t.string   "value"
-    t.boolean  "approved"
-    t.integer  "approver_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "mappings", force: true do |t|
     t.integer  "bad_phrase_id"
     t.integer  "good_phrase_id"
+    t.boolean  "approved"
+    t.integer  "approver_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "phrases", force: true do |t|
+    t.string   "value"
+    t.boolean  "approved"
+    t.integer  "approver_id"
+    t.boolean  "positive_sentiment", default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

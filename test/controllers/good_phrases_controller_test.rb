@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GoodPhraseTest < ActiveSupport::TestCase
+class GoodPhrasesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

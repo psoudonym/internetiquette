@@ -1,0 +1,2 @@
+class GoodPhrasesController < ApplicationController
+end

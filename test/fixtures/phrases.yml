@@ -3,9 +3,11 @@
 one:
   value: MyString
   approved: false
-  approver_id: 
+  approver_id: 1
+  positive_sentiment: false
 
 two:
   value: MyString
   approved: false
-  approver_id: 
+  approver_id: 1
+  positive_sentiment: false

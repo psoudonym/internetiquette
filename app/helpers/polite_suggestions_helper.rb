@@ -1,0 +1,2 @@
+module PoliteSuggestionsHelper
+end

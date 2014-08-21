@@ -1,0 +1,2 @@
+class BadPhrasesController < ApplicationController
+end

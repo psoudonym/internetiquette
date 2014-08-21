@@ -1,0 +1,2 @@
+class PoliteSuggestionsController < ApplicationController
+end
