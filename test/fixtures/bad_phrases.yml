@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: MyString
+  approved: false
+  approver_id: 
+
+two:
+  value: MyString
+  approved: false
+  approver_id: 
