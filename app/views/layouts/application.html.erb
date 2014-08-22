@@ -8,14 +8,8 @@
   <%= yield :head %>
 </head>
 <body>
-
-  <ul>
-    <li><%= link_to 'admin', '/admin' %></li>
-    <li><%= link_to 'new mapping', new_mapping_path %></li>
-    <li><%= link_to 'new bad phrases', new_bad_phrase_path %></li>
-    <li><%= link_to 'suggestions', polite_suggestions_path %></li>
-  </ul>
-
+  
+  <%= render :partial => '/layouts/navigation' %>
   <%= render :partial => '/layouts/flash' %>
   <%= yield %>
 

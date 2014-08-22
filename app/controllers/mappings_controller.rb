@@ -1,13 +1,15 @@
 class MappingsController < ApplicationController
   #before_filter :initialize_mapping :only => [:new, :create]
 
+  def index
+    @mappings = Mapping.all
+  end
+
   def new
     @mapping = Mapping.new
   end
 
-
   def create
-
     begin
       bad_phrase  = Phrase.where(:value => params[:mapping][:bad_phrase], :positive_sentiment => false).first_or_create!
       good_phrase = Phrase.where(:value => params[:mapping][:good_phrase], :positive_sentiment => true).first_or_create!
@@ -21,6 +23,10 @@ class MappingsController < ApplicationController
     end
   end
 
+  def purge
+    Mapping.where(:id => params[:ids]).destroy_all
+    redirect_to admin_mappings_path
+  end
 
 private
 

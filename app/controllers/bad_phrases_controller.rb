@@ -1,5 +1,9 @@
 class BadPhrasesController < ApplicationController
 
+  def index
+    @bad_phrases = Phrase.negative.all
+  end
+
   def new
     @bad_phrase = Phrase.new
   end

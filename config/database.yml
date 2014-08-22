@@ -4,3 +4,10 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+
+development:
+  <<: *default
+  database: internetiquette_development
+  username: jinx
+  host: localhost
+  password:
