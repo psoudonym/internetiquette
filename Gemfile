@@ -14,6 +14,7 @@ gem 'carrierwave' #simple and extremely flexible way to upload files from Ruby a
 gem 'fog' #cloud services library
 gem 'mini_magick' #wrapper of image magick
 gem 'hashie' #a simple collection of useful Hash extensions
+gem 'rails_12factor', :group => :production #Run Rails the 12factor way, needed for heroku
 
 group :doc do 
   gem 'sdoc', require: false # bundle exec rake doc:rails generates the API under doc/api.
