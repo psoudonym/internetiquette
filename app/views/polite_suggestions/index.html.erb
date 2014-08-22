@@ -1,0 +1,26 @@
+<% content_for :head do %>
+  <style type="text/css">
+    .box_with_border {
+      width: 100px;
+      display: inline-block;
+      border: 1px solid black;
+    }
+  </style>
+<% end %>
+
+
+<ul>Suggestion
+  <%= form_tag batch_create_polite_suggestions_path do %>
+    <% @polite_suggestions.each do |polite_suggestion| %>
+      <li>
+        <span class="box_with_border">
+          <%= polite_suggestion.value %>
+        </span>
+        =>
+        <%= hidden_field_tag 'mapping[bad_value_id][]', polite_suggestion.id %>
+        <%= text_field_tag 'mapping[good_value][]' %>
+      </li>
+    <% end %>
+    <%= submit_tag 'batch create' %>
+  <% end %>
+</ul>

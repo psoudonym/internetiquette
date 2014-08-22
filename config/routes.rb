@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :mappings
   resources :good_phrases
   resources :bad_phrases
+  resources :polite_suggestions do
+    post :batch_create, :on => :collection, :action => :batch_create, :as => :batch_create
+  end
 
   root :controller => 'mappings', :action => 'new'
 
