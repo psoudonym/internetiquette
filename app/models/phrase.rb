@@ -1,4 +1,7 @@
 class Phrase < ActiveRecord::Base
+  has_many :bad_mappings, :foreign_key => 'bad_phrase_id', :class_name => 'Mapping'
+  has_many :good_mappings, :foreign_key => 'good_phrase_id', :class_name => 'Mapping'
+
   validates_presence_of :value
   validates_uniqueness_of :value#, :scope => [:positive_sentiment]
 
