@@ -1,3 +1,3 @@
-class PoliteSuggestion < BadPhrase
-  default_scope(-> { includes(:mappings).where('mappings.id is null').references(:mappings)})
+class PoliteSuggestion < Phrase
+  default_scope(-> { where("phrases.positive_sentiment = false").includes(:mappings).where('mappings.id is null').references(:mappings) } )
 end
