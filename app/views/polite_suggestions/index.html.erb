@@ -14,7 +14,7 @@
     <% @polite_suggestions.each do |polite_suggestion| %>
       <li>
         <span class="box_with_border">
-          <%= polite_suggestion.value %>
+          <%= punish_bad_word(polite_suggestion.value) %>
         </span>
         =>
         <%= hidden_field_tag 'mappings[][bad_phrase_id]', polite_suggestion.id %>

@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+ span.bad_word_wrapper {
+  // color: black;
+  // text-decoration: line-through;
+  position: relative;
+
+  &:after {
+    border-bottom: .2em solid black;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+
+  span.bad_word_heart {
+    color: red;
+  }
+}
+
+.bad_phrase {
+  text-decoration-color: black;
+  color: red;
+}
