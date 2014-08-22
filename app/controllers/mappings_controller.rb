@@ -12,7 +12,7 @@ class MappingsController < ApplicationController
       bad_phrase  = Phrase.where(:value => params[:mapping][:bad_phrase], :positive_sentiment => false).first_or_create!
       good_phrase = Phrase.where(:value => params[:mapping][:good_phrase], :positive_sentiment => true).first_or_create!
       mapping     = Mapping.create! :bad_phrase_id => bad_phrase.id, :good_phrase_id => good_phrase.id 
-      flash[:sucess] = "Your contribution has been noted, and we thank you for your assitance in the endevaor"
+      flash[:success] = "Your contribution has been noted, and we thank you for your assitance in the endevaor"
       redirect_to root_path
     rescue Exception => error
       @mapping = Mapping.new

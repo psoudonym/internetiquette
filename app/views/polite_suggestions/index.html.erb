@@ -17,8 +17,8 @@
           <%= polite_suggestion.value %>
         </span>
         =>
-        <%= hidden_field_tag 'mapping[bad_value_id][]', polite_suggestion.id %>
-        <%= text_field_tag 'mapping[good_value][]' %>
+        <%= hidden_field_tag 'mappings[][bad_phrase_id]', polite_suggestion.id %>
+        <%= text_field_tag 'mappings[][good_phrase]' %>
       </li>
     <% end %>
     <%= submit_tag 'batch create' %>
