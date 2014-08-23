@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   concern :purgable do
     delete :index, :on => :collection, :action => :purge, :as => :purge
   end

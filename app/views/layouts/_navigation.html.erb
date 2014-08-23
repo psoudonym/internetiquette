@@ -1,4 +1,11 @@
 <dl>
+  <% if user_signed_in? %>
+    welcome <%= current_user.email %>, <%= link_to 'sign out', destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to 'log in', new_user_session_path %>
+    <%= link_to 'sign up', new_user_registration_path %>
+  <% end %>
+  
   <dt>Mappings:</dt>
   <dd><%= link_to 'new', new_mapping_path %> <%= link_to 'list', mappings_path %></dd>
   <dt>Bad Phrases:</dt>
