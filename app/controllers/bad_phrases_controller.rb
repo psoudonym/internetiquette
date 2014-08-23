@@ -1,4 +1,5 @@
 class BadPhrasesController < ApplicationController
+  before_filter :authenticate_admin!, :only => :purge
 
   def index
     @bad_phrases = Phrase.negative.all
@@ -18,5 +19,11 @@ class BadPhrasesController < ApplicationController
       flash[:error] = "Do pardon us, but #{error}"
       render :action => :new
     end
+  end
+
+  def purge
+    Phrase.where(:id => params[:ids]).destroy_all
+    flash[:success] = 'Those pesky things shan\'t be disturbing you any more'
+    redirect_to bad_phrases_path
   end
 end

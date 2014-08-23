@@ -25,6 +25,7 @@ class MappingsController < ApplicationController
 
   def purge
     Mapping.where(:id => params[:ids]).destroy_all
+    flash[:success] = 'Those pesky things shan\'t be disturbing you any more'
     redirect_to mappings_path
   end
 
