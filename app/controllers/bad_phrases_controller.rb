@@ -8,7 +8,6 @@ class BadPhrasesController < ApplicationController
     @bad_phrase = Phrase.new
   end
 
-
   def create
     begin
       bad_phrase  = Phrase.where(:value => params[:bad_phrase][:value], :positive_sentiment => false).first_or_create!

@@ -1,5 +1,5 @@
 class MappingsController < ApplicationController
-  #before_filter :initialize_mapping :only => [:new, :create]
+  before_filter :authenticate_admin!, :only => :purge
 
   def index
     @mappings = Mapping.all
@@ -25,12 +25,7 @@ class MappingsController < ApplicationController
 
   def purge
     Mapping.where(:id => params[:ids]).destroy_all
-    redirect_to admin_mappings_path
+    redirect_to mappings_path
   end
 
-private
-
-  def initialize_mapping
-    @mapping = Mapping.new
-  end
 end
