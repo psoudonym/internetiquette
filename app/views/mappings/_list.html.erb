@@ -1,0 +1,6 @@
+<% @mappings.each do |mapping| %>
+  <li>
+    <%= check_box_tag 'ids[]', mapping.id if current_user.try(:admin?) %>
+    <%= punish_bad_word(mapping.bad_phrase.value) %> => <%= mapping.good_phrase.value %>
+  </li>
+<% end %>

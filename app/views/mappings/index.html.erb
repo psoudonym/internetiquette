@@ -1,11 +1,10 @@
 <ul>Mappings
-  <%= form_tag purge_mappings_path do %>
-    <% @mappings.each do |mapping| %>
-      <li>
-        <%= check_box_tag 'ids[]', mapping.id %>
-        <%= punish_bad_word(mapping.bad_phrase.value) %> => <%= mapping.good_phrase.value %>
-      </li>
+  <% if current_user.try(:admin?) %>
+    <%= form_tag purge_mappings_path do %>
+      <%= render :partial => 'list' %>
+      <%= submit_tag 'purge!!' %>
     <% end %>
-    <%= submit_tag 'purge!!' %>
+  <% else %>
+    <%= render :partial => 'list' %>
   <% end %>
 </ul>
