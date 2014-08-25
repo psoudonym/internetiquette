@@ -1,4 +1,5 @@
 <dl>
+  <%= link_to 'home', root_path %>
   <% if user_signed_in? %>
     welcome <%= current_user.email %>
     <%= '(ADMIN)' if current_user.admin? %>,

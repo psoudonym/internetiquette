@@ -28,11 +28,26 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Bitter-Italic';
+  //src:font-url('Bitter-Regular.ttf') format('truetype');
+  src: url('/assets/Bitter-Italic.ttf') format('truetype');
+  // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
+  //      url('/assets/HDV_Peace.woff') format('woff'),
+  //      url('/assets/HDV_Peace.ttf') format('truetype'),
+  //      url('/assets/HDV_Peace.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 $bitter-regular: 'Bitter-Regular';
+$bitter-italic: 'Bitter-Italic';
 
 body {
   font-family: $bitter-regular;
   background-color: $off-white;
+  font-size: .875em;
 }
 
 
@@ -61,19 +76,26 @@ body {
 }
 
 h2 {
-  font-size: 1.750em;
+  font-size: 1.5125em;
+  font-weight: normal;
 }
 
 .contribute {
   background-color: $green-grey;
   height: 4em;
   input[type=text] {
-    ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-      font-style: italic;
-      color: $grey;
+    font-family: $bitter-italic;
+    &#mapping_bad_phrase {
+      color: $green-grey;
+      text-decoration: line-through;
+      text-align: right;
+    }
+    &#mapping_good_phrase {
+      color: $red;
     }
   }
 }
+
 
 
 dl#onepager {
@@ -84,12 +106,58 @@ dl#onepager {
     width: 15.625em;
     padding-left: 1.563em;
     padding-right: 1.563em;
+    &.contribute {
+      color: $off-white;
+    }
+    &.how-it-works {
+      color: $green-grey;
+    }
+    &.submissions {
+      h2 {
+        margin-bottom: 0;
+      }
+      color: $green-grey;
+    }
   }
   dd {
     margin: 0;
     clear: left;
     display: inline-block;
-    width: 41.25em;
+    width: 55em;
     padding-right: 1.563em;
+    &.how-it-works {
+      .step {
+        padding-right: 4em;
+        float: left;
+        h2 {
+          color: red;
+        }
+      }
+    }
+    &.submissions {
+      dl#submissions_list {
+        dt,dd {
+          border-top: 1px solid $grey;
+          width: 45%;
+          font-family: $bitter-italic;
+          margin: 0;
+          line-height: 2em;
+          &:last-of-type {
+            border-bottom: 1px solid $grey;
+          }
+        }
+        dt {
+          text-align: right;
+          float: left;
+          color: $green-grey;
+          text-decoration: line-through;
+        }
+        dd {
+          text-align: left;
+          clear: left;
+          color: $red;
+        }
+      }
+    }
   }
 }

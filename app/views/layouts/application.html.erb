@@ -9,7 +9,7 @@
 </head>
 <body id="<%= controller.controller_name.singularize %>">
   
-  <%= render :partial => '/layouts/navigation' %>
+  <%= render :partial => '/layouts/navigation' unless controller.controller_name.singularize == 'home' %>
   <%= render :partial => '/layouts/flash' %>
   <%= yield %>
 
