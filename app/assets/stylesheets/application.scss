@@ -47,7 +47,9 @@ $bitter-italic: 'Bitter-Italic';
 body {
   font-family: $bitter-regular;
   background-color: $off-white;
-  font-size: .875em;
+  font-size: .875rem;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -76,46 +78,46 @@ body {
 }
 
 h2 {
-  font-size: 1.5125em;
+  @include large-text;
   font-weight: normal;
 }
 
 .contribute {
   background-color: $green-grey;
-  height: 4em;
-  input[type=text] {
-    font-family: $bitter-italic;
-    &#mapping_bad_phrase {
-      color: $green-grey;
-      text-decoration: line-through;
-      text-align: right;
-    }
-    &#mapping_good_phrase {
-      color: $red;
-    }
-  }
+  height: 6.6rem;
+  position: relative;
+}
+
+.submissions {
+  padding-top: 10px;
 }
 
 
 
 dl#onepager {
-  width: 76em;
+  width: 76rem;
   dt {
     margin: 0;
     display: inline-block; 
     float: left;
-    width: 15.625em;
-    padding-left: 1.563em;
-    padding-right: 1.563em;
+    width: 15.625rem;
+    padding-left: $list-padding;
+    padding-right: $list-padding;
     &.contribute {
       color: $off-white;
+      h2 {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 40%;
+      }
     }
     &.how-it-works {
       color: $green-grey;
     }
     &.submissions {
       h2 {
-        margin-bottom: 0;
+        margin: 0;
       }
       color: $green-grey;
     }
@@ -124,11 +126,28 @@ dl#onepager {
     margin: 0;
     clear: left;
     display: inline-block;
-    width: 55em;
-    padding-right: 1.563em;
+    width: 55rem;
+    padding-right: $list-padding;
+    &.contribute {
+      input[type=text] {
+        margin: 1.3em 0 0 0;
+        width: 15.35rem;
+        @include large-text;
+        font-family: $bitter-italic;
+        &#mapping_bad_phrase {
+          margin-right: $list-padding;
+          color: $green-grey;
+          text-decoration: line-through;
+          text-align: right;
+        }
+        &#mapping_good_phrase {
+          color: $red;
+        }
+      }
+    }
     &.how-it-works {
       .step {
-        padding-right: 4em;
+        padding-right: 4rem;
         float: left;
         h2 {
           color: red;
@@ -137,12 +156,13 @@ dl#onepager {
     }
     &.submissions {
       dl#submissions_list {
+        margin: 0;
         dt,dd {
           border-top: 1px solid $grey;
-          width: 45%;
+          width: 40%;
           font-family: $bitter-italic;
           margin: 0;
-          line-height: 2em;
+          line-height: 2rem;
           &:last-of-type {
             border-bottom: 1px solid $grey;
           }
