@@ -1,12 +1,46 @@
-<div id="home">
-  <dl id="onepager">
-    <dt class="label">
-      How It works:
-      Copy
-    </dt>
-    <dd>
-      row of steps
-    </dd>
 
-  </dl>
-</div>
+<dl id="onepager">
+  <dt>
+    <h2>How It works:</h2>
+    Internetiquette is a browser plugin that converts internet rudeness to into polite statements. Crowd-sourced submissions.
+  </dt>
+  <dd>
+    <div class="floatl">
+      <h2>Download Plugin</h2>
+      <%= image_tag 'circlePlaceholder.png' %>
+    </div>
+    <div class="floatl">
+      <h2>Enable Extension</h2>
+      <%= image_tag 'circlePlaceholder.png' %>
+    </div>
+    <div class="floatl">
+      <h2>Marvel at Politeness</h2>
+      <%= image_tag 'circlePlaceholder.png' %>
+    </div>
+  </dd>
+  <dt class="contribute">
+    <h2>Contribute:</h2>
+  </dt>
+  <dd class="contribute">
+    <%= form_for @mapping do |f| %>
+      <%= f.text_field :bad_phrase, :placeholder => "Rude Phrase" %>
+      <%= f.text_field :good_phrase, :placeholder => "Polite Phrase" %>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </dd>
+  <dt>
+    <h2>Submissions:</h2>
+  </dt>
+  <dd>
+    <ul>
+      <% if current_user.try(:admin?) %>
+        <%= form_tag purge_mappings_path do %>
+          <%= render :partial => 'list' %>
+          <%= submit_tag 'purge!!' %>
+        <% end %>
+      <% else %>
+        <%= render :partial => '/mappings/list' %>
+      <% end %>
+    </ul>
+  </dd>
+</dl>

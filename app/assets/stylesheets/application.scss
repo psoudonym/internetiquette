@@ -1,3 +1,5 @@
+@import "_mixins";
+@import "_utilities";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,6 +15,25 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Bitter-Regular';
+  //src:font-url('Bitter-Regular.ttf') format('truetype');
+  src: url('/assets/Bitter-Regular.ttf') format('truetype');
+  // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
+  //      url('/assets/HDV_Peace.woff') format('woff'),
+  //      url('/assets/HDV_Peace.ttf') format('truetype'),
+  //      url('/assets/HDV_Peace.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$bitter-regular: 'Bitter-Regular';
+
+body {
+  font-family: $bitter-regular;
+  background-color: $off-white;
+}
 
 
  span.bad_word_wrapper {
@@ -30,7 +51,7 @@
   }
 
   span.bad_word_heart {
-    color: red;
+    color: $red;
   }
 }
 
@@ -39,21 +60,36 @@
   color: red;
 }
 
+h2 {
+  font-size: 1.750em;
+}
+
+.contribute {
+  background-color: $green-grey;
+  height: 4em;
+  input[type=text] {
+    ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+      font-style: italic;
+      color: $grey;
+    }
+  }
+}
 
 
-#home {
-  dl#onepager {
-    dt {
-      float: left;
-      width: 15.625em;
-      padding-left: 1.563em;
-      padding-right: 1.563em;
-    }
-    dd {
-      clear: left;
-      display: inline-block;
-      width: 43.750em;
-      padding-right: 1.563em;
-    }
+dl#onepager {
+  dt {
+    margin: 0;
+    display: inline-block; 
+    float: left;
+    width: 15.625em;
+    padding-left: 1.563em;
+    padding-right: 1.563em;
+  }
+  dd {
+    margin: 0;
+    clear: left;
+    display: inline-block;
+    width: 41.25em;
+    padding-right: 1.563em;
   }
 }

@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <%= yield :head %>
 </head>
-<body>
+<body id="<%= controller.controller_name.singularize %>">
   
   <%= render :partial => '/layouts/navigation' %>
   <%= render :partial => '/layouts/flash' %>

@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     post :batch_create, :on => :collection, :action => :batch_create, :as => :batch_create
   end
 
-  root :controller => 'mappings', :action => 'new'
+  root :controller => 'homes', :action => 'show'
   
 end
