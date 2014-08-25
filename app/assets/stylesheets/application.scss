@@ -38,3 +38,22 @@
   text-decoration-color: black;
   color: red;
 }
+
+
+
+#home {
+  dl#onepager {
+    dt {
+      float: left;
+      width: 15.625em;
+      padding-left: 1.563em;
+      padding-right: 1.563em;
+    }
+    dd {
+      clear: left;
+      display: inline-block;
+      width: 43.750em;
+      padding-right: 1.563em;
+    }
+  }
+}

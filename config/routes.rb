@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     delete :index, :on => :collection, :action => :purge, :as => :purge
   end
 
+  resource  :home
   resources :mappings, :concerns => :purgable
   resources :good_phrases, :concerns => :purgable
   resources :bad_phrases, :concerns => :purgable
