@@ -47,7 +47,7 @@ $bitter-italic: 'Bitter-Italic';
 body {
   font-family: $bitter-regular;
   background-color: $off-white;
-  font-size: .875rem;
+  font-size: .875em;
   margin: 0;
   padding: 0;
 }
@@ -84,7 +84,7 @@ h2 {
 
 .contribute {
   background-color: $green-grey;
-  height: 6.6rem;
+  height: 7.5rem;
   position: relative;
 }
 
@@ -95,12 +95,12 @@ h2 {
 
 
 dl#onepager {
-  width: 76rem;
+  width: 76em;
   dt {
     margin: 0;
     display: inline-block; 
     float: left;
-    width: 15.625rem;
+    width: 15.625em;
     padding-left: $list-padding;
     padding-right: $list-padding;
     &.contribute {
@@ -126,12 +126,12 @@ dl#onepager {
     margin: 0;
     clear: left;
     display: inline-block;
-    width: 55rem;
+    width: 55em;
     padding-right: $list-padding;
     &.contribute {
       input[type=text] {
         margin: 1.3em 0 0 0;
-        width: 15.35rem;
+        width: 19.5rem;
         @include large-text;
         font-family: $bitter-italic;
         &#mapping_bad_phrase {
@@ -147,7 +147,7 @@ dl#onepager {
     }
     &.how-it-works {
       .step {
-        padding-right: 4rem;
+        padding-right: 4em;
         float: left;
         h2 {
           color: red;
@@ -159,21 +159,24 @@ dl#onepager {
         margin: 0;
         dt,dd {
           border-top: 1px solid $grey;
-          width: 40%;
+          width: 19.8rem;
           font-family: $bitter-italic;
           margin: 0;
-          line-height: 2rem;
+          line-height: 2em;
           &:last-of-type {
             border-bottom: 1px solid $grey;
           }
         }
         dt {
+          padding-left: 0;
           text-align: right;
           float: left;
           color: $green-grey;
           text-decoration: line-through;
+          padding-right: 1.8rem;
         }
         dd {
+          padding-right: 0;
           text-align: left;
           clear: left;
           color: $red;
