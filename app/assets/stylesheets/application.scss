@@ -82,6 +82,10 @@ h2 {
   font-weight: normal;
 }
 
+.how-it-works {
+  height: 15.8rem;
+}
+
 .contribute {
   background-color: $green-grey;
   height: 7.5rem;
@@ -89,19 +93,17 @@ h2 {
 }
 
 .submissions {
-  padding-top: 10px;
+  padding-top: 1.5rem;
 }
 
-
-
 dl#onepager {
-  width: 76em;
+  width: 76rem;
   dt {
     margin: 0;
     display: inline-block; 
     float: left;
     width: 15.625em;
-    padding-left: $list-padding;
+    padding-left: 2.563rem;
     padding-right: $list-padding;
     &.contribute {
       color: $off-white;
