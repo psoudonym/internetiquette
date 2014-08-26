@@ -96,6 +96,11 @@ h2 {
   padding-top: 1.5rem;
 }
 
+.buffer {
+  height: 9rem;
+  background-color: $aqua;
+}
+
 dl#onepager {
   width: 76rem;
   dt {
@@ -184,6 +189,12 @@ dl#onepager {
           color: $red;
         }
       }
+    }
+  }
+  dd, dt {
+    &.buffer {
+      margin-top: 2rem;
+      height: 9rem;
     }
   }
 }
