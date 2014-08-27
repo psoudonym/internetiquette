@@ -222,6 +222,8 @@ div#body {
             font-family: $bitter-italic;
             margin: 0;
             line-height: 2em;
+            width: 19.5rem;
+            display: inline-block;
             &:last-of-type {
               border-bottom: 1px solid $grey;
             }
@@ -230,9 +232,10 @@ div#body {
             padding-left: 0;
             text-align: right;
             float: left;
+            clear: left;
             color: $green-grey;
             text-decoration: line-through;
-            padding-right: 1.8rem;
+            margin-right: 1.8rem;
           }
           dd {
             padding-right: 0;
