@@ -216,6 +216,7 @@ div#body {
       .other {
         dl#submissions_list {
           margin: 0;
+          width: 41rem;
           dt,dd {
             border-top: 1px solid $grey;
             width: 19.8rem;
@@ -223,7 +224,7 @@ div#body {
             margin: 0;
             line-height: 2em;
             width: 19.5rem;
-            display: inline-block;
+            // clear: left;
             &:last-of-type {
               border-bottom: 1px solid $grey;
             }
@@ -232,16 +233,17 @@ div#body {
             padding-left: 0;
             text-align: right;
             float: left;
-            clear: left;
             color: $green-grey;
             text-decoration: line-through;
             margin-right: 1.8rem;
+            display: inline-block;
           }
           dd {
             padding-right: 0;
             text-align: left;
-            clear: left;
+            // clear: left;
             color: $red;
+            display: inline-block;
           }
         }
       }
