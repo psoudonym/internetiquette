@@ -1,3 +1,15 @@
+
+<!-- <div id="left-side">
+  <div id="header">
+  </div>
+  <div id="body">
+    <% ["how-it-works", "contribute", "submissions", "buffer", "about"].each do |class_name| %>
+      <div class="row <%= class_name %>">
+      </div>
+    <% end %>
+  </div>
+</div> -->
+<div id="wrapper">
 <div id="header">
   <ul id="navigation">
     <li><%= link_to "How It works", "#how-it-works" %></li>
@@ -14,68 +26,83 @@
   </div>
   <div style="clear:both"></div>
 </div>
-<dl id="onepager">
-  <dt class="how-it-works">
-    <h2><a name="how-it-works">How It works:</a></h2>
-    Internetiquette is a browser plugin that converts internet rudeness to into polite statements. Crowd-sourced submissions.
-  </dt>
-  <dd class="how-it-works">
-    <div class="step">
-      <h2>Download Plugin</h2>
-      <%= image_tag 'circlePlaceholder.png' %>
+<div id="body">
+  <div class="row how-it-works">
+    <div class="caption">
+      <h2><a name="how-it-works">How It works:</a></h2>
+      Internetiquette is a browser plugin that converts internet rudeness to into polite statements. Crowd-sourced submissions.
     </div>
-    <div class="step">
-      <h2>Enable Extension</h2>
-      <%= image_tag 'circlePlaceholder.png' %>
+    <div class="other">
+      <div class="step">
+        <h2>Download Plugin</h2>
+        <%= image_tag 'circlePlaceholder.png' %>
+      </div>
+      <div class="step">
+        <h2>Enable Extension</h2>
+        <%= image_tag 'circlePlaceholder.png' %>
+      </div>
+      <div class="step">
+        <h2>Marvel at Politeness</h2>
+        <%= image_tag 'circlePlaceholder.png' %>
+      </div>
     </div>
-    <div class="step">
-      <h2>Marvel at Politeness</h2>
-      <%= image_tag 'circlePlaceholder.png' %>
+  </div>
+  <div class="row contribute">
+    <div class="caption">
+      <h2><a name="contribute">Contribute:</a></h2>
     </div>
-  </dd>
-  <dt class="contribute">
-    <h2><a name="contribute">Contribute:</a></h2>
-  </dt>
-  <dd class="contribute">
-    <%= form_for @mapping do |f| %>
-      <%= f.text_field :bad_phrase, :placeholder => "Rude Phrase" %>
-      <%= f.text_field :good_phrase, :placeholder => "Polite Phrase" %>
-      <%= hidden_field_tag :back_to, request.fullpath %>
-      <%= link_to "submit", "javascript:void(0)", :id => "submit", :onclick => '$("form").submit()' %>
-      <%#= f.submit "Submit", :id => "submit" %>
-    <% end %>
-  </dd>
-  <dt class="submissions">
-    <h2><a name="submissions">Submissions:</a></h2>
-    <%= @mappings.count %> and counting
-  </dt>
-  <dd class="submissions">
-    <dl id="submissions_list">
-      <% @mappings.each do |mapping| %>
-        <dt><%= mapping.bad_phrase.value %></dt>
-        <dd><%= mapping.good_phrase.value %></dd>
+    <div class="other">
+      <%= form_for @mapping do |f| %>
+        <%= f.text_field :bad_phrase, :placeholder => "Rude Phrase" %>
+        <%= f.text_field :good_phrase, :placeholder => "Polite Phrase" %>
+        <%= hidden_field_tag :back_to, request.fullpath %>
+        <%= link_to "submit", "javascript:void(0)", :id => "submit", :onclick => '$("form").submit()' %>
+        <%#= f.submit "Submit", :id => "submit" %>
       <% end %>
-    </ul>
-  </dd>
-  <dt class="buffer"></dt>
-  <dd class="buffer"></dt>
-  <dt class="about">
-    <h2><a name="about">About<br/>The Project</a></h2>
-  </dt>
-  <dd class="about">
-    <div class="content">
-      Internetiquette is a weekend project done by Charles and Magnus at HQ, Brooklyn and is inspired by the idea that the internet needn't bring out the worst in all of us.
     </div>
-  </dd>
-<!--   <dt class="press">
+  </div>
+  <div class="row submissions">
+    <div class="caption">
+      <h2><a name="submissions">Submissions:</a></h2>
+      <%= @mappings.count %> and counting
+    </div>
+    <div class="other">
+      <dl id="submissions_list">
+        <% @mappings.each do |mapping| %>
+          <dt><%= mapping.bad_phrase.value %></dt>
+          <dd><%= mapping.good_phrase.value %></dd>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="row buffer">
+    <div class="caption"></div>
+    <div class="other"></div>
+  </div>
+  <div class="row about">
+    <div class="caption">
+      <h2><a name="about">About<br/>The Project</a></h2>
+    </div>
+    <div class="other">
+      <span class="content">
+        Internetiquette is a weekend project done by Charles and Magnus at HQ, Brooklyn and is inspired by the idea that the internet needn't bring out the worst in all of us.
+      </span>
+    </div>
+  </div>
+<!--
+  <div class="row press">
+   <div class="press">
     <h2><a name="press">Press</a></h2>
-  </dt>
-  <dd class="press">
+  </div>
+  <div class="press">
     <div>
       <p>
         Suspendisse non commodo elit, a convallis libero. Nam porta, justo et convallis sagittis, arcu ante porttitor mauris, nec feugiat mi orci elementum
       </p>
       <div>- Jesse Lochrie</div>
     </div>
-  </dd> -->
-</dl>
+  </div> </div>-->
+  </div>
+</div>
+<!-- <div id="right-side">
+</div> -->

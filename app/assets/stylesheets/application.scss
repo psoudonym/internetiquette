@@ -52,10 +52,21 @@ body {
   margin: 0;
   padding: 0;
 }
+/*
+div#left-side, div#right-side {
+  float: left;
+  width: auto;
+}
+*/
+div#wrapper {
+  // float: left;
+  // width: 76rem;
+  width: 100%;
+}
+
 
 
 div#header {
-  width: 76rem;
   border-top: 2px solid $red;
   background-color: $aqua; /* to show its not working */
   background-image: url('/assets/aqua_bg.jpg');
@@ -109,162 +120,161 @@ h2 {
   font-weight: normal;
 }
 
-.how-it-works {
-  height: 15.8rem;
-}
-
-.contribute {
-  background-color: $green-grey;
-  height: 7.5rem;
-  position: relative;
-}
-
-.submissions {
-  padding-top: 1.5rem;
-}
-
-.buffer {
-  height: 4rem;
-  background-color: yellow; /* to show its not working */
-  background-image: url('/assets/happy_pattern.jpg');
-}
-
-.about,.press {
-  background-color: $red;
-  color: $off-white;
-  height: 8rem;
-  border-bottom: 2px solid $off-white;
-}
-
-.about {
-  margin-top: -4px !important;
-}
-
-.press {
-  margin-top: -2px !important;
-}
 
 
-dl#onepager {
-  width: 76rem;
+
+div#body {
+  width: 100%;
   margin-bottom: 0;
-  dt {
-    margin: 0;
-    display: inline-block; 
-    float: left;
-    width: 15.625em;
-    padding-left: 2.563rem;
-    padding-right: $list-padding;
-    &.contribute {
-      color: $off-white;
-      h2 {
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 40%;
-      }
+  margin-left: auto;
+  div.row {
+    clear: both;
+    div.caption {
+      margin: 0;
+      display: inline-block; 
+      float: left;
+      width: 15.625em;
+      padding-left: 2.563rem;
+      padding-right: $list-padding;
+    }
+    div.other {
+      margin: 0;
+      // clear: left;
+      display: inline-block;
+      width: auto;
+      overflow: hidden;
+      padding-right: $list-padding;
     }
     &.how-it-works {
+      height: 15.8rem;
       color: $green-grey;
-    }
-    &.submissions {
-      h2 {
-        margin: 0;
-      }
-      color: $green-grey;
-    }
-    &.about {
-      h2 {
-        margin-top: 2.5rem;
-      }
-    }
-  }
-  dd {
-    margin: 0;
-    clear: left;
-    display: inline-block;
-    width: 55em;
-    padding-right: $list-padding;
-    &.contribute {
-      form {
-        margin-top: .9rem;
-        #submit {
-          border: 0;
-          color: white;
-          margin-left: .55rem;
-          font-family: $bitter-regular;
-          padding: .25rem;
-          text-align: center;
-          font-size: 1.3425rem;
-          text-decoration: none;
-          text-transform: uppercase;
-          background-color: $red;
+      div.other {
+        .step {
+          padding-right: 4em;
+          float: left;
+          h2 {
+            color: red;
+          }
         }
-        input[type=text] {
-          @include large-text;
-          margin: 1.3em 0 0 0;
-          width: 19.5rem;
-          font-family: $bitter-italic;
-          &#mapping_bad_phrase {
-            margin-right: $list-padding;
+      }
+    }
+
+    &.contribute {
+      background-color: $green-grey;
+      height: 7.5rem;
+      //position: relative;
+      .caption {
+        color: $off-white;
+        h2 {
+          margin: 0;
+          padding: 0;
+          // top: 40%;
+        }
+      }
+      .other {
+        form {
+          margin-top: .9rem;
+          #submit {
+            border: 0;
+            color: white;
+            margin-left: .55rem;
+            font-family: $bitter-regular;
+            padding: .25rem;
+            text-align: center;
+            font-size: 1.3425rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: $red;
+          }
+          input[type=text] {
+            @include large-text;
+            margin: 1.3em 0 0 0;
+            width: 19.5rem;
+            font-family: $bitter-italic;
+            &#mapping_bad_phrase {
+              margin-right: $list-padding;
+              color: $green-grey;
+              text-decoration: line-through;
+              text-align: right;
+            }
+            &#mapping_good_phrase {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+
+    &.submissions {
+      padding-top: 1.5rem;
+      .caption {
+        h2 {
+          margin: 0;
+        }
+        color: $green-grey;
+      }
+      .other {
+        dl#submissions_list {
+          margin: 0;
+          dt,dd {
+            border-top: 1px solid $grey;
+            width: 19.8rem;
+            font-family: $bitter-italic;
+            margin: 0;
+            line-height: 2em;
+            &:last-of-type {
+              border-bottom: 1px solid $grey;
+            }
+          }
+          dt {
+            padding-left: 0;
+            text-align: right;
+            float: left;
             color: $green-grey;
             text-decoration: line-through;
-            text-align: right;
+            padding-right: 1.8rem;
           }
-          &#mapping_good_phrase {
+          dd {
+            padding-right: 0;
+            text-align: left;
+            clear: left;
             color: $red;
           }
         }
       }
     }
-    &.how-it-works {
-      .step {
-        padding-right: 4em;
-        float: left;
-        h2 {
-          color: red;
-        }
-      }
-    }
-    &.submissions {
-      dl#submissions_list {
-        margin: 0;
-        dt,dd {
-          border-top: 1px solid $grey;
-          width: 19.8rem;
-          font-family: $bitter-italic;
-          margin: 0;
-          line-height: 2em;
-          &:last-of-type {
-            border-bottom: 1px solid $grey;
-          }
-        }
-        dt {
-          padding-left: 0;
-          text-align: right;
-          float: left;
-          color: $green-grey;
-          text-decoration: line-through;
-          padding-right: 1.8rem;
-        }
-        dd {
-          padding-right: 0;
-          text-align: left;
-          clear: left;
-          color: $red;
-        }
-      }
-    }
-    &.about {
-      .content {
-        margin-top: 3rem;
-      }
-    }
-  }
-  dd, dt {
+
     &.buffer {
-      margin-top: 2rem;
       height: 4rem;
+      background-color: yellow; /* to show its not working */
+      background-image: url('/assets/happy_pattern.jpg');
+      margin-top: 2rem;
     }
+
+    &.about,&.press {
+      background-color: $red;
+      color: $off-white;
+      height: 8rem;
+      border-bottom: 2px solid $off-white;
+    }
+
+    &.about {
+      margin-top: -4px !important;
+      .caption {
+        h2 {
+          margin-top: 2.5rem;
+        }
+      }
+      .other {
+        //.content {
+        //  margin-top: 3rem;
+        //}
+      }
+    }
+
+    &.press {
+      margin-top: -2px !important;
+    }
+
   }
 }
