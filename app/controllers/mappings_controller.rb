@@ -19,7 +19,11 @@ class MappingsController < ApplicationController
     rescue Exception => error
       @mapping = Mapping.new
       flash[:error] = "Do pardon us, but #{error}"
-      render :action => :new
+      if params[:back_to] == "/"
+        redirect_to root_path
+      else
+        render :action => :new
+      end
     end
   end
 

@@ -8,7 +8,7 @@
   </ul>
   <div style="clear:both"></div>
   <div id="title-area">
-    <%= link_to "install plugin", "#", :id => "install-plugin" %>
+    <%= link_to "install plugin", "javascript:void(0)", :id => "install-plugin" %>
     <div id="title">Internetiquette</div>
     <div id="tagline">Making the internet more polite, one line at a time.</div>
   </div>
@@ -41,7 +41,8 @@
       <%= f.text_field :bad_phrase, :placeholder => "Rude Phrase" %>
       <%= f.text_field :good_phrase, :placeholder => "Polite Phrase" %>
       <%= hidden_field_tag :back_to, request.fullpath %>
-      <%= f.submit "Submit" %>
+      <%= link_to "submit", "javascript:void(0)", :id => "submit", :onclick => '$("form").submit()' %>
+      <%#= f.submit "Submit", :id => "submit" %>
     <% end %>
   </dd>
   <dt class="submissions">

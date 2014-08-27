@@ -186,19 +186,33 @@ dl#onepager {
     width: 55em;
     padding-right: $list-padding;
     &.contribute {
-      input[type=text] {
-        margin: 1.3em 0 0 0;
-        width: 19.5rem;
-        @include large-text;
-        font-family: $bitter-italic;
-        &#mapping_bad_phrase {
-          margin-right: $list-padding;
-          color: $green-grey;
-          text-decoration: line-through;
-          text-align: right;
+      form {
+        #submit {
+          border: 0;
+          color: white;
+          margin-left: .55rem;
+          font-family: $bitter-regular;
+          padding: .25rem;
+          text-align: center;
+          font-size: 1.3425rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          background-color: $red;
         }
-        &#mapping_good_phrase {
-          color: $red;
+        input[type=text] {
+          @include large-text;
+          margin: 1.3em 0 0 0;
+          width: 19.5rem;
+          font-family: $bitter-italic;
+          &#mapping_bad_phrase {
+            margin-right: $list-padding;
+            color: $green-grey;
+            text-decoration: line-through;
+            text-align: right;
+          }
+          &#mapping_good_phrase {
+            color: $red;
+          }
         }
       }
     }
