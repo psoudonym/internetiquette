@@ -162,11 +162,10 @@ div#body {
     &.contribute {
       background-color: $green-grey;
       height: 7.5rem;
-      //position: relative;
       .caption {
         color: $off-white;
         h2 {
-          margin: 0;
+          margin: 3rem 0 0 0;
           padding: 0;
           // top: 40%;
         }
@@ -216,14 +215,13 @@ div#body {
       .other {
         dl#submissions_list {
           margin: 0;
-          width: 41rem;
+          width: 42rem;
           dt,dd {
             border-top: 1px solid $grey;
             width: 19.8rem;
             font-family: $bitter-italic;
             margin: 0;
             line-height: 2em;
-            width: 19.5rem;
             // clear: left;
             &:last-of-type {
               border-bottom: 1px solid $grey;
@@ -235,7 +233,7 @@ div#body {
             float: left;
             color: $green-grey;
             text-decoration: line-through;
-            margin-right: 1.8rem;
+            margin-right: 2rem;
             display: inline-block;
           }
           dd {
