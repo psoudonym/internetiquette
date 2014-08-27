@@ -187,6 +187,7 @@ dl#onepager {
     padding-right: $list-padding;
     &.contribute {
       form {
+        margin-top: .9rem;
         #submit {
           border: 0;
           color: white;
