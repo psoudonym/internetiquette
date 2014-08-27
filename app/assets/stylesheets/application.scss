@@ -57,7 +57,7 @@ body {
 div#header {
   width: 76rem;
   border-top: 2px solid $red;
-  background-color: $aqua;
+  background-color: $aqua; /* to show its not working */
   background-image: url('/assets/aqua_bg.jpg');
   height: 18rem;
   ul#navigation {
@@ -75,6 +75,7 @@ div#header {
     }
   }
   div#title-area {
+    width: 50rem;
     margin-top: 4.7rem;
     margin-left: 3rem;
     div#title {
@@ -85,6 +86,20 @@ div#header {
     }
     div#tagline {
       color: white;
+      font-size: 1.125em;
+    }
+    a#install-plugin {
+      width: 11rem;
+      padding: .5rem;
+      text-align: center;
+      margin-top: 1.8rem;
+      font-size: 1.25rem;
+      display: block;
+      background-color: $red;
+      color: $off-white;
+      text-transform: uppercase;
+      float: right;
+      text-decoration: none;
     }
   }
 }
@@ -110,6 +125,7 @@ h2 {
 
 .buffer {
   height: 4rem;
+  background-color: yellow; /* to show its not working */
   background-image: url('/assets/happy_pattern.jpg');
 }
 
