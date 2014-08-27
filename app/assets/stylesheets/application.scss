@@ -17,19 +17,8 @@
  */
 
 
-$bitter-regular: 'Bitter-Regular';
-$bitter-italic: 'Bitter-Italic';
 
-body {
-  font-family: $bitter-regular;
-  background-color: $off-white;
-  font-size: .875em;
-  margin: 0;
-  padding: 0;
-}
-
-
- span.bad_word_wrapper {
+span.bad_word_wrapper {
   // color: black;
   // text-decoration: line-through;
   position: relative;
@@ -51,6 +40,53 @@ body {
 .bad_phrase {
   text-decoration-color: black;
   color: red;
+}
+
+
+// ==================================
+
+body {
+  font-family: $bitter-regular;
+  background-color: $off-white;
+  font-size: .875em;
+  margin: 0;
+  padding: 0;
+}
+
+
+div#header {
+  width: 76rem;
+  border-top: 2px solid $red;
+  background-color: $aqua;
+  background-image: url('/assets/aqua_bg.jpg');
+  height: 18rem;
+  ul#navigation {
+    list-style: none;
+    clear: both;
+    display: block;
+    li {
+      float: left;
+      padding-right: 1rem;
+      text-transform: uppercase;
+      a {
+        color: $off-white;
+        text-decoration: none;
+      }
+    }
+  }
+  div#title-area {
+    margin-top: 4.7rem;
+    margin-left: 3rem;
+    div#title {
+      color: $red;
+      font-weight: bold;
+      font-size: 2.9rem;
+      font-family: $bitter-italic;
+    }
+    div#tagline {
+      color: white;
+    }
+  }
 }
 
 h2 {
@@ -92,30 +128,6 @@ h2 {
   margin-top: -2px !important;
 }
 
-div#header {
-  width: 76rem;
-  border-top: 2px solid $red;
-  background-color: $aqua;
-  background-image: url('/assets/aqua_bg.jpg');
-  height: 18rem;
-  ul#navigation {
-    list-style: none;
-    clear: both;
-    display: block;
-    li {
-      float: left;
-      padding-right: 1rem;
-      text-transform: uppercase;
-      a {
-        color: $off-white;
-        text-decoration: none;
-      }
-    }
-    div#title-area {
-
-    }
-  }
-}
 
 dl#onepager {
   width: 76rem;
