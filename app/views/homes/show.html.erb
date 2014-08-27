@@ -1,7 +1,20 @@
-
+<div id="header">
+  <ul id="navigation">
+    <li><%= link_to "How It works", "#how-it-works" %></li>
+    <li><%= link_to "Contribute", "#contribute" %></li>
+    <li><%= link_to "Submissions", "#submissions" %></li>
+    <li><%= link_to "About", "#about" %></li>
+<!--     <li><%= link_to "Press", "#press" %></li> -->
+  </ul>
+  <br style="clear:both"/>
+  <div class="title-area">
+    <div class="title">Internetiquette</div>
+    <div class="tagline">Making the internet more polite, one line at a time.</div>
+  </div>
+</div>
 <dl id="onepager">
   <dt class="how-it-works">
-    <h2>How It works:</h2>
+    <h2><a name="how-it-works">How It works:</a></h2>
     Internetiquette is a browser plugin that converts internet rudeness to into polite statements. Crowd-sourced submissions.
   </dt>
   <dd class="how-it-works">
@@ -19,7 +32,7 @@
     </div>
   </dd>
   <dt class="contribute">
-    <h2>Contribute:</h2>
+    <h2><a name="contribute">Contribute:</a></h2>
   </dt>
   <dd class="contribute">
     <%= form_for @mapping do |f| %>
@@ -30,7 +43,7 @@
     <% end %>
   </dd>
   <dt class="submissions">
-    <h2>Submissions:</h2>
+    <h2><a name="submissions">Submissions:</a></h2>
     <%= @mappings.count %> and counting
   </dt>
   <dd class="submissions">
@@ -43,17 +56,23 @@
   </dd>
   <dt class="buffer"></dt>
   <dd class="buffer"></dt>
-  <dt>About the Project</dt>
-  <dd>
-    Internetiquette is a weekend project done by Charles and Magnus at HQ, Brooklyn and is inspired by the idea that the internet neednt bring out the worst in all of us.
+  <dt class="about">
+    <h2><a name="about">About<br/>The Project</a></h2>
+  </dt>
+  <dd class="about">
+    <div class="content">
+      Internetiquette is a weekend project done by Charles and Magnus at HQ, Brooklyn and is inspired by the idea that the internet needn't bring out the worst in all of us.
+    </div>
   </dd>
-  <dt>Press</dt>
-  <dd>
+<!--   <dt class="press">
+    <h2><a name="press">Press</a></h2>
+  </dt>
+  <dd class="press">
     <div>
       <p>
         Suspendisse non commodo elit, a convallis libero. Nam porta, justo et convallis sagittis, arcu ante porttitor mauris, nec feugiat mi orci elementum
       </p>
       <div>- Jesse Lochrie</div>
     </div>
-
+  </dd> -->
 </dl>

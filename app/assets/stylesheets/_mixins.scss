@@ -1,9 +1,10 @@
 /* Colors */
 
-$red: #ee344c;
+$red: #ff0037;
+//$red: #ee344c;
 $dark-red: #d3203e;
-$green-grey: #66798c;
-//$green-grey: #43596f;
+//$green-grey: #66798c;
+$green-grey: #43596f;
 $off-white: #fafafa;
 $aqua: #8ebdcd;
 $grey: #999;
@@ -15,4 +16,29 @@ $list-padding: 1.563rem;
 @mixin large-text {
   font-size: 1.3425rem;
   font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'Bitter-Regular';
+  //src:font-url('Bitter-Regular.ttf') format('truetype');
+  src: url('/assets/Bitter-Regular.ttf') format('truetype');
+  // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
+  //      url('/assets/HDV_Peace.woff') format('woff'),
+  //      url('/assets/HDV_Peace.ttf') format('truetype'),
+  //      url('/assets/HDV_Peace.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bitter-Italic';
+  //src:font-url('Bitter-Regular.ttf') format('truetype');
+  src: url('/assets/Bitter-Italic.ttf') format('truetype');
+  // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
+  //      url('/assets/HDV_Peace.woff') format('woff'),
+  //      url('/assets/HDV_Peace.ttf') format('truetype'),
+  //      url('/assets/HDV_Peace.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }

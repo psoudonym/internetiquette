@@ -16,30 +16,6 @@
  *= require_self
  */
 
-@font-face {
-  font-family: 'Bitter-Regular';
-  //src:font-url('Bitter-Regular.ttf') format('truetype');
-  src: url('/assets/Bitter-Regular.ttf') format('truetype');
-  // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
-  //      url('/assets/HDV_Peace.woff') format('woff'),
-  //      url('/assets/HDV_Peace.ttf') format('truetype'),
-  //      url('/assets/HDV_Peace.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Bitter-Italic';
-  //src:font-url('Bitter-Regular.ttf') format('truetype');
-  src: url('/assets/Bitter-Italic.ttf') format('truetype');
-  // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
-  //      url('/assets/HDV_Peace.woff') format('woff'),
-  //      url('/assets/HDV_Peace.ttf') format('truetype'),
-  //      url('/assets/HDV_Peace.svg#webfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 $bitter-regular: 'Bitter-Regular';
 $bitter-italic: 'Bitter-Italic';
@@ -97,12 +73,53 @@ h2 {
 }
 
 .buffer {
-  height: 9rem;
+  height: 4rem;
+  background-image: url('/assets/happy_pattern.jpg');
+}
+
+.about,.press {
+  background-color: $red;
+  color: $off-white;
+  height: 8rem;
+  border-bottom: 2px solid $off-white;
+}
+
+.about {
+  margin-top: -4px !important;
+}
+
+.press {
+  margin-top: -2px !important;
+}
+
+div#header {
+  width: 76rem;
+  border-top: 2px solid $red;
   background-color: $aqua;
+  background-image: url('/assets/aqua_bg.jpg');
+  height: 18rem;
+  ul#navigation {
+    list-style: none;
+    clear: both;
+    display: block;
+    li {
+      float: left;
+      padding-right: 1rem;
+      text-transform: uppercase;
+      a {
+        color: $off-white;
+        text-decoration: none;
+      }
+    }
+    div#title-area {
+
+    }
+  }
 }
 
 dl#onepager {
   width: 76rem;
+  margin-bottom: 0;
   dt {
     margin: 0;
     display: inline-block; 
@@ -127,6 +144,11 @@ dl#onepager {
         margin: 0;
       }
       color: $green-grey;
+    }
+    &.about {
+      h2 {
+        margin-top: 2.5rem;
+      }
     }
   }
   dd {
@@ -190,11 +212,16 @@ dl#onepager {
         }
       }
     }
+    &.about {
+      .content {
+        margin-top: 3rem;
+      }
+    }
   }
   dd, dt {
     &.buffer {
       margin-top: 2rem;
-      height: 9rem;
+      height: 4rem;
     }
   }
 }
