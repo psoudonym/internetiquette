@@ -8,4 +8,8 @@ module ApplicationHelper
     end
   end
 
+  def obfuscate(string)
+    string.split(//).join("\u2063")
+  end
+
 end

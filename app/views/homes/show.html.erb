@@ -69,7 +69,7 @@
     <div class="other">
       <dl id="submissions_list">
         <% @mappings.each do |mapping| %>
-          <dt><%= mapping.bad_phrase.value %></dt>
+          <dt><%= obfuscate mapping.bad_phrase.value %></dt>
           <dd><%= mapping.good_phrase.value %></dd>
         <% end %>
       </ul>

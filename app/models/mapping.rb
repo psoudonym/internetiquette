@@ -4,5 +4,7 @@ class Mapping < ActiveRecord::Base
 
   validates_uniqueness_of :good_phrase_id, :scope => :bad_phrase_id
   #scope(:alphabetical, -> { order 'dp_categories.name ASC' })
+
+  scope(:desc_bad_word_count, -> { includes(:bad_phrase).order("word_count DESC").references(:bad_phrase) })
 end
 
