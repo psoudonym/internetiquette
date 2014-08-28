@@ -69,7 +69,7 @@ div#wrapper {
 div#header {
   border-top: 2px solid $red;
   background-color: $aqua; /* to show its not working */
-  background-image: image-url('/assets/aqua_bg.jpg');
+  background-image: image-url("aqua_bg.jpg");
   height: 18rem;
   ul#navigation {
     list-style: none;
@@ -250,7 +250,7 @@ div#body {
     &.buffer {
       height: 4rem;
       background-color: yellow; /* to show its not working */
-      background-image: image-url('/assets/happy_pattern.jpg');
+      background-image: image-url("happy_pattern.jpg");
       margin-top: 2rem;
     }
 
