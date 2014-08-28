@@ -14,7 +14,7 @@ gem 'carrierwave' #simple and extremely flexible way to upload files from Ruby a
 gem 'fog' #cloud services library
 gem 'mini_magick' #wrapper of image magick
 gem 'hashie' #a simple collection of useful Hash extensions
-gem 'rails_12factor', :group => :production #Run Rails the 12factor way, needed for heroku
+
 gem 'devise', '~> 3.3.0' #Flexible user authentication solution for Rails with Warden
 gem 'pundit', '~> 0.3.0' #Object oriented authorization for Rails applications
 
@@ -34,6 +34,11 @@ group :assets do
   # Use Uglifier as compressor for JavaScript assets
   gem 'uglifier', '>= 1.3.0'
 
+end
+
+group :production do
+  gem 'rails_12factor' #Run Rails the 12factor way, needed for heroku
+  #gem 'sprockets_better_errors', '~> 0.0.5' #make it painfully obvious when you've done something wrong with the rails asset pipeline. 
 end
 
 group :development, :test, :cucumber do
