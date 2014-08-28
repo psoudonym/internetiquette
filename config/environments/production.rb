@@ -31,7 +31,7 @@ Rails.application.configure do
   config.assets.compile = false
 
   # Generate digests for assets URLs.
-  config.assets.digest = false
+  config.assets.digest = true
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
 # config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/

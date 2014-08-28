@@ -20,8 +20,8 @@ $list-padding: 1.563rem;
 
 @font-face {
   font-family: 'Bitter-Regular';
-  //src:font-url('Bitter-Regular.ttf') format('truetype');
-  src: url('/assets/Bitter-Regular.ttf') format('truetype');
+  src: asset-url('Bitter-Regular.ttf') format('truetype');
+  src: asset-url("Bitter-Regular.ttf?#iefix") format('truetype');
   // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
   //      url('/assets/HDV_Peace.woff') format('woff'),
   //      url('/assets/HDV_Peace.ttf') format('truetype'),
@@ -32,8 +32,8 @@ $list-padding: 1.563rem;
 
 @font-face {
   font-family: 'Bitter-Italic';
-  //src:font-url('Bitter-Regular.ttf') format('truetype');
-  src: url('/assets/Bitter-Italic.ttf') format('truetype');
+  src: asset-url('Bitter-Regular.ttf') format('truetype');
+  src: asset-url("Bitter-Italic.ttf?#iefix") format('truetype');
   // src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
   //      url('/assets/HDV_Peace.woff') format('woff'),
   //      url('/assets/HDV_Peace.ttf') format('truetype'),
