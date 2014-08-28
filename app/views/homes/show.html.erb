@@ -13,6 +13,7 @@
 <div id="header">
   <ul id="navigation">
     <li><%= link_to "How It works", "#how-it-works" %></li>
+    <li><%= link_to "Try It Out", "#try-it-out" %></li>
     <li><%= link_to "Contribute", "#contribute" %></li>
     <li><%= link_to "Submissions", "#submissions" %></li>
     <li><%= link_to "About", "#about" %></li>
@@ -47,6 +48,19 @@
       </div>
     </div>
   </div>
+  <div class="row try-it-out">
+    <div class="caption">
+      <h2><a name="try-it-out">Try It Out:</a></h2>
+    </div>
+    <div class="other">
+      <%= form_tag try_it_path, :id => 'try_it_form' do |f| %>
+        <%= text_field_tag :try_it_url, nil, :placeholder => "Rude Url" %>
+        <%= hidden_field_tag :back_to, request.fullpath %>
+        <%= link_to "submit", "javascript:void(0)", :class => "submit", :onclick => '$("form#try_it_form").submit()' %>
+        <%#= f.submit "Submit", :class => "submit" %>
+      <% end %>
+    </div>
+  </div>
   <div class="row contribute">
     <div class="caption">
       <h2><a name="contribute">Contribute:</a></h2>
@@ -56,8 +70,8 @@
         <%= f.text_field :bad_phrase, :placeholder => "Rude Phrase" %>
         <%= f.text_field :good_phrase, :placeholder => "Polite Phrase" %>
         <%= hidden_field_tag :back_to, request.fullpath %>
-        <%= link_to "submit", "javascript:void(0)", :id => "submit", :onclick => '$("form").submit()' %>
-        <%#= f.submit "Submit", :id => "submit" %>
+        <%= link_to "submit", "javascript:void(0)", :class => "submit", :onclick => '$("form#new_mapping").submit()' %>
+        <%#= f.submit "Submit", :class => "submit" %>
       <% end %>
     </div>
   </div>

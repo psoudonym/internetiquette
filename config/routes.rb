@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resource  :home
+  resource  :try_it
   resources :mappings, :concerns => :purgable
   resources :good_phrases, :concerns => :purgable
   resources :bad_phrases, :concerns => :purgable

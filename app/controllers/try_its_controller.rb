@@ -1,0 +1,2 @@
+class TryItsController < ApplicationController
+end
