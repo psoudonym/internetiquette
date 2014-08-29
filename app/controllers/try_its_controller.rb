@@ -10,7 +10,8 @@ class TryItsController < ApplicationController
   end
 
   def source
-#    #@source = Premailer.new(@url, :warn_level => Premailer::Warnings::SAFE)
+     @source = Premailer.new(@url, :warn_level => Premailer::Warnings::SAFE)
+
 #    @source  = Roadie::Document.new(RestClient.get(@url)).transform
 #    #document  = Roadie::Document.new(RestClient.get(@url).to_s)
 #    #uri_data = URI.parse(@url)
@@ -18,7 +19,7 @@ class TryItsController < ApplicationController
 #    #@source = document.transform
 #
 #
-#    render :text => @source
+    render :text => @source.to_inline_css
   end
 
   private
