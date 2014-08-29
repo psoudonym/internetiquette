@@ -1,0 +1,15 @@
+<% content_for :js do %>
+    function resizeIframe(obj) {
+      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+
+    /* Convert Gathered information to usable information in the JS */
+    $(function () {
+    });
+<% end %>
+
+<div>
+  <%= link_to "<- Back to Internetiquette", root_path %>
+</div>
+<iframe id="try-it-example" src="<%= @url %>" frameBorder="0" width="100%" onload='debugger;javascript:resizeIframe(this);'>  
+</iframe>
