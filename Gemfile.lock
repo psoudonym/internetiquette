@@ -27,6 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     better_errors (1.1.0)
@@ -55,6 +56,8 @@ GEM
       execjs
     coffee-script-source (1.7.1)
     columnize (0.8.9)
+    css_parser (1.3.5)
+      addressable
     daemons (1.1.9)
     debug_inspector (0.0.2)
     debugger (1.6.8)
@@ -95,6 +98,7 @@ GEM
     hashie (2.0.5)
     highline (1.6.21)
     hike (1.2.3)
+    htmlentities (4.3.2)
     i18n (0.6.11)
     ipaddress (0.8.0)
     jbuilder (1.5.3)
@@ -127,6 +131,9 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
+    premailer (1.8.2)
+      css_parser (>= 1.3.5)
+      htmlentities (>= 4.0.0)
     pry (0.10.0)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -165,6 +172,9 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    roadie (3.0.0.pre1)
+      css_parser (~> 1.3.4)
+      nokogiri (~> 1.6.0)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -223,6 +233,7 @@ DEPENDENCIES
   mini_magick
   oj
   pg
+  premailer
   pry
   pry-debugger
   pundit (~> 0.3.0)
@@ -230,6 +241,7 @@ DEPENDENCIES
   rails_12factor
   random_data
   rest-client (~> 1.6.7)
+  roadie (= 3.0.0.pre1)
   sass-rails (~> 4.0.3)
   sdoc
   string-scrub

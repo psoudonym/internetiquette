@@ -14,7 +14,8 @@ gem 'carrierwave' #simple and extremely flexible way to upload files from Ruby a
 gem 'fog' #cloud services library
 gem 'mini_magick' #wrapper of image magick
 gem 'hashie' #a simple collection of useful Hash extensions
-
+gem 'premailer' #Preflight for HTML email http://premailer.dialect.ca/
+gem 'roadie','3.0.0.pre1' #converts css defined in header and external file into inline css
 gem 'devise', '~> 3.3.0' #Flexible user authentication solution for Rails with Warden
 gem 'pundit', '~> 0.3.0' #Object oriented authorization for Rails applications
 

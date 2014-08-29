@@ -5,8 +5,10 @@ Rails.application.routes.draw do
     delete :index, :on => :collection, :action => :purge, :as => :purge
   end
 
-  resource  :home
-  resource  :try_it
+  resource  :home 
+  resource  :try_it do
+    get :source, :as => :source
+  end
   resources :mappings, :concerns => :purgable
   resources :good_phrases, :concerns => :purgable
   resources :bad_phrases, :concerns => :purgable
