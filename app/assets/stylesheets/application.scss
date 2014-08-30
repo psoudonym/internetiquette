@@ -204,13 +204,18 @@ div#body {
       padding-top: 2rem;
       .step {
         float: left;
-        width: auto;
+        width: 15.3rem;
+        margin-right: .1rem;
         .step-header {
           @extend .red-dotted-underline;
+          font-size: 1rem;
           display: block;
           text-transform: capitalize;
           line-height: $size-large-text;
           height: 2.5rem;
+          &.visit-any-site {
+            text-transform: none;
+          }
         }
         .step-body {
           padding-right: 4em;
