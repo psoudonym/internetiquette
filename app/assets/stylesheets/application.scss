@@ -87,11 +87,12 @@ body {
   margin: 0;
   padding: 0;
   border-top: 5px solid $red;
+  border-bottom: 5px solid $red;
   color: $black;
 }
 
 
-div#wrapper {
+div#wrapper, div#footer-wrapper {
   // float: left;
   width: 64rem;
   margin-left: auto;
@@ -99,6 +100,14 @@ div#wrapper {
   //width: 100%;
 }
 
+div#wrapper {
+
+}
+
+div#footer-frame {
+  background-color: $grey;
+  color: $black;
+}
 
 
 
@@ -154,10 +163,10 @@ h2 {
 
 
 
-div#body {
+div#body,div#footer-wrapper {
   margin-top: 2rem;
   padding-left: 2.6rem;
-  width: auto;
+
   margin-bottom: 0;
   margin-left: auto;
   div.row {
@@ -313,8 +322,8 @@ div#body {
     }
 
     &.about,&.press {
-      background-color: $red;
-      color: $off-white;
+      // background-color: $red;
+      // color: $off-white;
       height: 8rem;
       border-bottom: 2px solid $off-white;
     }
