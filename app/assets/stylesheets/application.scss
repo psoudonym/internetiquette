@@ -69,6 +69,15 @@ form {
   }
 }
 
+.red-dotted-underline {
+  display: inline-block;
+  border-bottom: 2px dotted $red;
+  height: 1em;
+  // -moz-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+  // -webkit-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+  // -o-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+  // border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 fill repeat;
+}
 
 // Common ==================================
 body {
@@ -122,15 +131,6 @@ div#header {
     margin-left: 2.6rem;
     div#title {
       font-size: 2.9rem;
-      span.text {
-        display: inline-block;
-        border-bottom: 2px dotted $red;
-        height: 1em;
-        // -moz-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
-        // -webkit-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
-        // -o-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
-        // border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 fill repeat;
-      }
     }
     div#tagline {
       font-size: 1.125em;
@@ -201,7 +201,6 @@ div#body {
     }
     &.how-it-works {
       height: 15.8rem;
-      color: $green-grey;
       div.other {
         .step {
           padding-right: 4em;
