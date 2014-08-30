@@ -1,13 +1,13 @@
 /* Colors */
 
-$red: #ff0037;
+$red: red;
 //$red: #ee344c;
 $dark-red: #d3203e;
 //$green-grey: #66798c;
 $green-grey: #43596f;
-$off-white: #fafafa;
+$off-white: #fbfbfb;
 $aqua: #8ebdcd;
-$grey: #999;
+$grey: #c9c9c9;
 
 /* Units */
 
@@ -44,3 +44,35 @@ $list-padding: 1.563rem;
 
 $bitter-regular: 'Bitter-Regular';
 $bitter-italic: 'Bitter-Italic';
+
+//LibreBaskerville
+
+
+@font-face {
+  font-family: 'LibreBaskerville-Bold';
+  src: asset-url('LibreBaskerville-Bold.ttf') format('truetype');
+  src: asset-url("LibreBaskerville-Bold.ttf?#iefix") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: asset-url('LibreBaskerville-Regular.ttf') format('truetype');
+  src: asset-url("LibreBaskerville-Regular.ttf?#iefix") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreBaskerville-Italic';
+  src: asset-url('LibreBaskerville-Italic.ttf') format('truetype');
+  src: asset-url("LibreBaskerville-Italic.ttf?#iefix") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$librebaskerville-italic: 'LibreBaskerville-Italic';
+$librebaskerville-regular: 'LibreBaskerville-Regular';
+$librebaskerville-italic: 'LibreBaskerville-Bold';

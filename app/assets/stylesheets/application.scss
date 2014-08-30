@@ -46,18 +46,14 @@ span.bad_word_wrapper {
 // ==================================
 
 body {
-  font-family: $bitter-regular;
+  font-family: $librebaskerville-regular;
   background-color: $off-white;
   font-size: .875em;
   margin: 0;
   padding: 0;
 }
-/*
-div#left-side, div#right-side {
-  float: left;
-  width: auto;
-}
-*/
+
+
 div#wrapper {
   // float: left;
   // width: 76rem;
@@ -86,20 +82,24 @@ form {
 }
 
 div#header {
-  border-top: 2px solid $red;
-  background-color: $aqua; /* to show its not working */
-  background-image: image-url("aqua_bg.jpg");
+  border-top: 5px solid $red;
   height: 18rem;
   ul#navigation {
+    border-bottom: 1px solid $grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: .9em;
+    padding-top: .3rem;
     list-style: none;
     clear: both;
     display: block;
+    height: 1.9rem;
     li {
       float: left;
       padding-right: 1rem;
-      text-transform: uppercase;
+      text-transform: capitalize;
       a {
-        color: $off-white;
+        color: black;
         text-decoration: none;
       }
     }
@@ -298,4 +298,8 @@ div#body {
     }
 
   }
+}
+
+.clear {
+  clear: both;
 }
