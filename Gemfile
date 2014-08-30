@@ -18,6 +18,8 @@ gem 'premailer' #Preflight for HTML email http://premailer.dialect.ca/
 gem 'roadie','3.0.0.pre1' #converts css defined in header and external file into inline css
 gem 'devise', '~> 3.3.0' #Flexible user authentication solution for Rails with Warden
 gem 'pundit', '~> 0.3.0' #Object oriented authorization for Rails applications
+gem 'htmlcompressor', '~> 0.1.1' #minifies html source code
+gem 'yui-compressor', '~> 0.12.0' #JavaScript minifier designed to be 100% safe and yield a higher compression ratio than most other tools
 
 group :doc do 
   gem 'sdoc', require: false # bundle exec rake doc:rails generates the API under doc/api.

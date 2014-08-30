@@ -10,21 +10,32 @@ class TryItsController < ApplicationController
   end
 
   def source
-     @source = Premailer.new(@url, :warn_level => Premailer::Warnings::SAFE)
+#      @source = Premailer.new(@url, :warn_level => Premailer::Warnings::SAFE)
 
-#    @source  = Roadie::Document.new(RestClient.get(@url)).transform
-#    #document  = Roadie::Document.new(RestClient.get(@url).to_s)
-#    #uri_data = URI.parse(@url)
-#    ##document.url_options = { :host => uri_data.host, :protocol => uri_data.scheme }
-#    #@source = document.transform
-#
-#
-    render :text => @source.to_inline_css
+#     @source  = Roadie::Document.new(RestClient.get(@url)).transform
+#     document  = Roadie::Document.new(RestClient.get(@url).to_s)
+#     uri_data = URI.parse(@url)
+#     #document.url_options = { :host => uri_data.host, :protocol => uri_data.scheme }
+#     @source = document.transform
+# 
+#  
+#     result = @source.to_inline_css
+#     render :text => result
+
+    begin
+      raw_source = RestClient.get(@url)
+      document   = Roadie::Document.new(RestClient.get(@url).to_s)
+      uri_data   = URI.parse(@url)
+      #document.url_options = { :host => uri_data.host, :protocol => uri_data.scheme }
+      @source    = document.transform
+    rescue Exception => e
+      @source    = raw_source
+    end
   end
 
   private
 
   def grab_url
-    @url = params[:url] ||  "http://psmag.com/navigation/health-and-behavior/women-arent-welcome-internet-72170/"
+    @url = params[:url]
   end
 end
