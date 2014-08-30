@@ -83,7 +83,7 @@ form {
 body {
   font-family: $librebaskerville-regular;
   background-color: $off-white;
-  font-size: .875em;
+  font-size: .7em;
   margin: 0;
   padding: 0;
   border-top: 5px solid $red;
@@ -194,19 +194,34 @@ div#body {
           input[type=text] {
             padding-left: .7em;
             margin-right: 1em;
-            width: 32em;
+            width: 43em;
           }
         }
       }
     }
     &.how-it-works {
       height: 15.8rem;
-      div.other {
-        .step {
+      padding-top: 1rem;
+      .step {
+        float: left;
+        width: auto;
+        .step-header {
+          @extend .red-dotted-underline;
+          display: block;
+          text-transform: capitalize;
+          line-height: $size-large-text;
+          height: 2.5rem;
+        }
+        .step-body {
           padding-right: 4em;
-          float: left;
-          h2 {
-            color: red;
+          padding-top: 1rem;
+          clear: both;
+          font-size: .8rem;
+        }
+        &.intro {
+          width: 15rem;
+          .step-header { 
+            @extend h2;
           }
         }
       }

@@ -16,12 +16,14 @@ $black: #231f20;
   border-radius: $radius;
 }
 
+$size-large-text: 1.3425rem;
+
 /* Units */
 
 $list-padding: 1.563rem;
 
 @mixin large-text {
-  font-size: 1.3425rem;
+  font-size: $size-large-text;
   font-weight: normal;
 }
 
