@@ -317,25 +317,25 @@ div#body,div#footer-body {
     }
 
     &.about,&.press {
-      // background-color: $red;
-      // color: $off-white;
       height: 8rem;
-      border-bottom: 2px solid $off-white;
     }
 
     &.about {
-      margin-top: -4px !important;
+      //margin-top: -4px !important;
       .caption {
         h2 {
-          margin-top: 2.5rem;
+          margin-top: 0;
         }
       }
       .other {
         .content {
           width: 44rem;
-          margin-top: 3rem;
+          //margin-top: 3rem;
           a {
-            color: white;
+            color: $black;
+            font-family: $librebaskerville-bold;
+            text-decoration: none;
+            letter-spacing: .1em;
           }
         }
       }
