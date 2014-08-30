@@ -66,7 +66,7 @@
     <div class="other">
       <%= form_for @mapping do |f| %>
         <%= f.text_field :bad_phrase, :placeholder => "Rude Phrase" %>
-        <%= f.text_field :good_phrase, :placeholder => "Polite Phrase" %>
+        <%= f.text_field :good_phrase, :placeholder => "Polite Suggestion" %>
         <%= hidden_field_tag :back_to, request.fullpath %>
         <%= link_to "submit", "javascript:void(0)", :class => "submit", :onclick => '$("form#new_mapping").submit()' %>
         <%#= f.submit "Submit", :class => "submit" %>

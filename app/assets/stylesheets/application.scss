@@ -65,6 +65,7 @@ form {
     //@include large-text;
     font-size: 1em;
     line-height: 1.8em;
+    background-color: $off-white;
     font-family: $librebaskerville-italic;
   }
 }
@@ -94,7 +95,7 @@ body {
 
 div#wrapper, div#footer-wrapper {
   // float: left;
-  width: 64rem;
+  width: 66.6rem;
   margin-left: auto;
   margin-right: auto;
   //width: 100%;
@@ -168,6 +169,7 @@ h2 {
 div#body,div#footer-body {
   margin-top: 2rem;
   padding-left: 2.6rem;
+  padding-right: 2.6rem;
 
   margin-bottom: 0;
   margin-left: auto;
@@ -215,6 +217,7 @@ div#body,div#footer-body {
       padding-top: 2rem;
       .step {
         float: left;
+        //width: 14.467rem;
         width: 15.3rem;
         margin-right: .1rem;
         .step-header {
@@ -243,10 +246,10 @@ div#body,div#footer-body {
       }
     }
     &.contribute {
-      background-color: $green-grey;
+      background-color: $light-grey;
+      border: 1px solid $dark-grey;
       height: 7.5rem;
       .caption {
-        color: $off-white;
         h2 {
           margin: 3rem 0 0 0;
           padding: 0;
@@ -255,9 +258,16 @@ div#body,div#footer-body {
       }
       .other {
         form {
-          margin-top: .9rem;
+          margin-top: 2rem;
+          .submit {
+            margin-left: 1rem;
+            padding-left: 1em;
+            padding-right: 1em;
+            text-transform: capitalize;
+          }
           input[type=text] {
             margin: 1.3em 0 0 0;
+            border: 1px solid $black;
             width: 19.5rem;
             &#mapping_bad_phrase {
               margin-right: $list-padding;
