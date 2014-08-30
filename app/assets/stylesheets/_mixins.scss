@@ -9,6 +9,12 @@ $off-white: #fbfbfb;
 $aqua: #8ebdcd;
 $grey: #c9c9c9;
 
+@mixin round_all_corners ($radius: 10px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
 /* Units */
 
 $list-padding: 1.563rem;

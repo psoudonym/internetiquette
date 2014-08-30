@@ -43,27 +43,23 @@ span.bad_word_wrapper {
 }
 
 
-// ==================================
+// Common ==================================
 
-body {
-  font-family: $librebaskerville-regular;
-  background-color: $off-white;
-  font-size: .875em;
-  margin: 0;
-  padding: 0;
+.button {
+  @include round_all_corners(7px);
+  padding: .4em 0 .4em 0;
+  text-transform: capitalize;
+  background-color: $red;
+  color: $off-white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
-
-
-div#wrapper {
-  // float: left;
-  // width: 76rem;
-  width: 100%;
-}
-
 
 form {
   margin-top: .9rem;
   .submit {
+    @include round_all_corners(7px);
     border: 0;
     color: white;
     margin-left: .55rem;
@@ -80,6 +76,26 @@ form {
     font-family: $bitter-italic;
   }
 }
+
+
+// Common ==================================
+body {
+  font-family: $librebaskerville-regular;
+  background-color: $off-white;
+  font-size: .875em;
+  margin: 0;
+  padding: 0;
+}
+
+
+div#wrapper {
+  // float: left;
+  // width: 76rem;
+  width: 100%;
+}
+
+
+
 
 div#header {
   border-top: 5px solid $red;
@@ -106,30 +122,28 @@ div#header {
   }
   div#title-area {
     width: 50rem;
-    margin-top: 4.7rem;
-    margin-left: 3rem;
+    margin-top: 3.5rem;
+    margin-left: 2.6rem;
     div#title {
-      color: $red;
-      font-weight: bold;
       font-size: 2.9rem;
-      font-family: $bitter-italic;
+      span.text {
+        display: inline-block;
+        border-bottom: 2px dotted $red;
+        // -moz-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+        // -webkit-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+        // -o-border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 repeat;
+        // border-image: url(http://www.w3.org/TR/css3-background/border.png) 27 fill repeat;
+      }
     }
     div#tagline {
-      color: white;
       font-size: 1.125em;
     }
     a#install-plugin {
+      @extend .button;
       width: 11rem;
-      padding: .5rem;
-      text-align: center;
       margin-top: 1.8rem;
       font-size: 1.25rem;
-      display: block;
-      background-color: $red;
-      color: $off-white;
-      text-transform: uppercase;
       float: right;
-      text-decoration: none;
     }
   }
 }
