@@ -105,7 +105,8 @@ div#wrapper {
 }
 
 div#footer-frame {
-  background-color: $grey;
+  background-color: $light-grey;
+  border-top: 1px solid $dark-grey;
   color: $black;
 }
 
@@ -113,9 +114,9 @@ div#footer-frame {
 
 div#header {
   height: 14.7rem;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $dark-grey;
   ul#navigation {
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid $dark-grey;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: .9em;
@@ -284,14 +285,14 @@ div#body,div#footer-body {
           margin: 0;
           width: 42rem;
           dt,dd {
-            border-top: 1px solid $grey;
+            border-top: 1px solid $dark-grey;
             width: 19.8rem;
             font-family: $bitter-italic;
             margin: 0;
             line-height: 2em;
             // clear: left;
             &:last-of-type {
-              border-bottom: 1px solid $grey;
+              border-bottom: 1px solid $dark-grey;
             }
           }
           dt {
@@ -337,7 +338,7 @@ div#body,div#footer-body {
       }
       .other {
         .content {
-          width: 42rem;
+          width: 44rem;
           margin-top: 3rem;
           a {
             color: white;
