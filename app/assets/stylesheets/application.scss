@@ -185,6 +185,8 @@ div#body {
       height: 6.6rem;
       .caption {
         @extend .tar;
+        position: relative;
+        left: -1em;
       } 
       .other {
         font-size: 1em;
