@@ -19,12 +19,12 @@
 
 
 span.bad_word_wrapper {
-  // color: black;
+  // color: $black;
   // text-decoration: line-through;
   position: relative;
 
   &:after {
-    border-bottom: .2em solid black;
+    border-bottom: .2em solid $black;
     content: "";
     left: 0;
     position: absolute;
@@ -38,7 +38,7 @@ span.bad_word_wrapper {
 }
 
 .bad_phrase {
-  text-decoration-color: black;
+  text-decoration-color: $black;
   color: red;
 }
 
@@ -46,34 +46,26 @@ span.bad_word_wrapper {
 // Common ==================================
 
 .button {
-  @include round_all_corners(7px);
-  padding: .4em 0 .4em 0;
-  text-transform: capitalize;
+  @include round_all_corners(4px);
+  padding: .4em;// 0 .4em 0;
   background-color: $red;
   color: $off-white;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 
 form {
   margin-top: .9rem;
   .submit {
-    @include round_all_corners(7px);
+    @extend .button;
     border: 0;
-    color: white;
-    margin-left: .55rem;
-    font-family: $bitter-regular;
-    padding: .25rem;
-    text-align: center;
-    font-size: 1.3425rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: $red;
   }
   input[type=text] {
-    @include large-text;
-    font-family: $bitter-italic;
+    //@include large-text;
+    font-size: 1em;
+    line-height: 1.8em;
+    font-family: $librebaskerville-italic;
   }
 }
 
@@ -85,20 +77,23 @@ body {
   font-size: .875em;
   margin: 0;
   padding: 0;
+  border-top: 5px solid $red;
+  color: $black;
 }
 
 
 div#wrapper {
   // float: left;
-  // width: 76rem;
-  width: 100%;
+  width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  //width: 100%;
 }
 
 
 
 
 div#header {
-  border-top: 5px solid $red;
   height: 14.7rem;
   border-bottom: 1px solid $grey;
   ul#navigation {
@@ -116,13 +111,13 @@ div#header {
       padding-right: 1rem;
       text-transform: capitalize;
       a {
-        color: black;
+        color: $black;
         text-decoration: none;
       }
     }
   }
   div#title-area {
-    width: 50rem;
+    width: 57.5rem;
     margin-top: 3.5rem;
     margin-left: 2.6rem;
     div#title {
@@ -142,6 +137,7 @@ div#header {
     }
     a#install-plugin {
       @extend .button;
+      text-transform: capitalize;
       width: 11rem;
       margin-top: 1.8rem;
       font-size: 1.25rem;
@@ -159,7 +155,9 @@ h2 {
 
 
 div#body {
-  width: 100%;
+  margin-top: 2rem;
+  padding-left: 2.6rem;
+  width: auto;
   margin-bottom: 0;
   margin-left: auto;
   div.row {
@@ -169,7 +167,7 @@ div#body {
       display: inline-block; 
       float: left;
       width: 15.625em;
-      padding-left: 2.563rem;
+      padding-left: .563rem;
       padding-right: $list-padding;
     }
     div.other {
@@ -177,8 +175,27 @@ div#body {
       // clear: left;
       display: inline-block;
       width: auto;
-      overflow: hidden;
+      //overflow: hidden;
       padding-right: $list-padding;
+    }
+    &.try-it-out {
+      color: white;
+      background-color: $black;
+      padding-top: .5rem;
+      height: 6.6rem;
+      .caption {
+        @extend .tar;
+      } 
+      .other {
+        font-size: 1em;
+        form {
+          input[type=text] {
+            padding-left: .7em;
+            margin-right: 1em;
+            width: 32em;
+          }
+        }
+      }
     }
     &.how-it-works {
       height: 15.8rem;
@@ -189,16 +206,6 @@ div#body {
           float: left;
           h2 {
             color: red;
-          }
-        }
-      }
-    }
-    &.try-it-out {
-      background-color: green;
-      .other {
-        form {
-          input[type=text] {
-            width: 41rem;
           }
         }
       }
