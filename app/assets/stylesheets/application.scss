@@ -253,6 +253,9 @@ div#body,div#footer-body {
         h2 {
           margin: 3rem 0 0 0;
           padding: 0;
+          @extend .tar;
+        position: relative;
+        left: -1em;
           // top: 40%;
         }
       }
@@ -268,15 +271,16 @@ div#body,div#footer-body {
           input[type=text] {
             margin: 1.3em 0 0 0;
             border: 1px solid $black;
-            width: 19.5rem;
+            width: 13.5rem;
+            padding-left: 1em;
+            padding-right: 1em;
             &#mapping_bad_phrase {
               margin-right: $list-padding;
-              color: $green-grey;
               text-decoration: line-through;
               text-align: right;
             }
             &#mapping_good_phrase {
-              color: $red;
+              //color: $red;
             }
           }
         }
@@ -285,11 +289,11 @@ div#body,div#footer-body {
 
     &.submissions {
       padding-top: 1.5rem;
+      padding-bottom: 5rem;
       .caption {
         h2 {
           margin: 0;
         }
-        color: $green-grey;
       }
       .other {
         dl#submissions_list {
@@ -298,7 +302,6 @@ div#body,div#footer-body {
           dt,dd {
             border-top: 1px solid $dark-grey;
             width: 19.8rem;
-            font-family: $bitter-italic;
             margin: 0;
             line-height: 2em;
             // clear: left;
@@ -310,16 +313,18 @@ div#body,div#footer-body {
             padding-left: 0;
             text-align: right;
             float: left;
-            color: $green-grey;
             text-decoration: line-through;
-            margin-right: 2rem;
+            font-family: $librebaskerville-italic;
+            padding-right: 2rem;
             display: inline-block;
           }
           dd {
+            font-family: $librebaskerville-bold;
             padding-right: 0;
+            font-size: 1.2em;
             text-align: left;
             // clear: left;
-            color: $red;
+            //color: $red;
             display: inline-block;
           }
         }
