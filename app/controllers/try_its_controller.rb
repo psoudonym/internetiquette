@@ -28,6 +28,7 @@ class TryItsController < ApplicationController
       uri_data   = URI.parse(@url)
       #document.url_options = { :host => uri_data.host, :protocol => uri_data.scheme }
       @source    = document.transform
+      binding.pry
     rescue Exception => e
       @source    = raw_source
     end
@@ -36,6 +37,6 @@ class TryItsController < ApplicationController
   private
 
   def grab_url
-    @url = params[:url]
+    @url = params[:url] || params[:try_it_url]
   end
 end
