@@ -56,7 +56,8 @@ span.bad_word_wrapper {
 }
 
 form {
-  margin-top: .9rem;
+  //margin-top: .9rem;
+  margin-top: -1px;
   .submit {
     @extend .button;
     border: 0;
@@ -181,11 +182,18 @@ div#body,div#footer-body {
       margin-left: auto; 
       margin-right: auto;
       width: 49rem;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       .caption {
         padding-left: 0;
         margin-right: 2em;
         width: auto;
         padding-right: 0;
+        h2 {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
       }
       .other {
         padding-right: 0;
@@ -260,19 +268,19 @@ div#body,div#footer-body {
       background-color: $light-grey;
       border: 1px solid $dark-grey;
       height: 7.5rem;
-      .caption {
-        h2 {
-          margin: 3rem 0 0 0;
-          padding: 0;
-          @extend .tar;
-        position: relative;
-        left: -1em;
-          // top: 40%;
-        }
-      }
+      // .caption {
+      //   h2 {
+      //     margin: 3rem 0 0 0;
+      //     padding: 0;
+      //     @extend .tar;
+      //   position: relative;
+      //   left: -1em;
+      //     // top: 40%;
+      //   }
+      // }
       .other {
         form {
-          margin-top: 2rem;
+          //margin-top: 2rem;
           .submit {
             margin-left: 1rem;
             padding-left: 1em;
@@ -280,9 +288,10 @@ div#body,div#footer-body {
             text-transform: capitalize;
           }
           input[type=text] {
-            margin: 1.3em 0 0 0;
+            //margin: 1.3em 0 0 0;
+            margin: 0;
             border: 1px solid $black;
-            width: 14rem;
+            width: 12.7rem;
             padding-left: 1em;
             padding-right: 1em;
             &#mapping_bad_phrase {
