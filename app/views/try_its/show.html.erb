@@ -40,6 +40,7 @@
   <h2>
     <%= link_to "<- Back to Internetiquette", root_path %>
   </h2>
+  <br/>
   <span>
     <span class="toggable" style="display:none">
       Finished:
@@ -47,7 +48,7 @@
     <span class="toggable">
       Loading: 
     </span>
-   <%= @url %>  <%#(the preview may mess things up)%></span>
+   <%= link_to @url, @url %>  <%#(the preview may mess things up)%></span>
 </div>
 <iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" height="1000px" width="100%" onload='javascript:resizeIframe_and_clean(this);'>
 </iframe>
