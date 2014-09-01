@@ -4,8 +4,8 @@
   }
 <% end %>
 
-<div>
+<div id="island">
   <%= link_to "<- Back to Internetiquette", root_path %>
 </div>
-<iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" width="100%" onload='javascript:resizeIframe(this);'>
+<iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" height="1000px" width="100%" onload='javascript:resizeIframe(this);'>
 </iframe>
