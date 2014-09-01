@@ -1,11 +1,42 @@
 <% content_for :js do %>
-  function resizeIframe(obj) {
+  function resizeIframe_and_clean(obj) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    document.getElementById('try-it-example').contentWindow.clean = window.clean;
+    document.getElementById('try-it-example').contentWindow.clean();
+  }
+
+  function clean() {
+    request = new XMLHttpRequest();
+    request.open('GET', 'http://internetiquette.herokuapp.com/mappings.json', true);
+
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400){
+        // Success!
+        window.data = JSON.parse(request.responseText);
+        for (bad_phrase in window.data.mappings) {
+          console.log("replacing "+ bad_phrase);
+          var regex = new RegExp(bad_phrase,"ig");
+          findAndReplaceDOMText(document.getElementById('try-it-example').contentDocument.getElementsByTagName("body")[0], {
+           find: regex,
+           replace: window.data.mappings[bad_phrase].toUpperCase()
+          });
+        }
+      } else {
+        // We reached our target server, but it returned an error
+        console.log("failure")
+      }
+    };
+
+    request.onerror = function() {
+      // There was a connection error of some sort
+    };
+
+    request.send();
   }
 <% end %>
 
 <div id="island">
   <%= link_to "<- Back to Internetiquette", root_path %>
 </div>
-<iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" height="1000px" width="100%" onload='javascript:resizeIframe(this);'>
+<iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" height="1000px" width="100%" onload='javascript:resizeIframe_and_clean(this);'>
 </iframe>
