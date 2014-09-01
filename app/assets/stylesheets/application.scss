@@ -60,6 +60,8 @@ form {
   .submit {
     @extend .button;
     border: 0;
+    margin-top: 1px;
+    line-height: $size-large-text;
   }
   input[type=text] {
     //@include large-text;
@@ -175,6 +177,20 @@ div#body,div#footer-body {
   margin-left: auto;
   div.row {
     clear: both;
+    .center {
+      margin-left: auto; 
+      margin-right: auto;
+      width: 49rem;
+      .caption {
+        padding-left: 0;
+        margin-right: 2em;
+        width: auto;
+        padding-right: 0;
+      }
+      .other {
+        padding-right: 0;
+      }
+    }
     div.caption {
       margin: 0;
       display: inline-block; 
@@ -196,11 +212,6 @@ div#body,div#footer-body {
       background-color: $black;
       padding-top: .5rem;
       height: 6.6rem;
-      .caption {
-        @extend .tar;
-        position: relative;
-        left: -1em;
-      } 
       .other {
         font-size: 1em;
         form {
@@ -271,7 +282,7 @@ div#body,div#footer-body {
           input[type=text] {
             margin: 1.3em 0 0 0;
             border: 1px solid $black;
-            width: 13.5rem;
+            width: 14rem;
             padding-left: 1em;
             padding-right: 1em;
             &#mapping_bad_phrase {
