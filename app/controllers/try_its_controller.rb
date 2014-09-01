@@ -38,5 +38,6 @@ class TryItsController < ApplicationController
 
   def grab_url
     @url = params[:url] || params[:try_it_url]
+    @url = "http://#{@url}" unless @url =~ URI::regexp
   end
 end

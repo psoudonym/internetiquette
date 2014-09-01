@@ -389,10 +389,12 @@ div#body,div#footer-body {
 
 body#try_it {
   border: none;
+  color: $off-white;
   #island {
     background-color: $red;
-    color: $off-white;
-    @extend h2;
+    h2 {
+      margin: 0;
+    }
     a {
       color: $off-white;
       text-decoration: none;

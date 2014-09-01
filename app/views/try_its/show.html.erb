@@ -37,13 +37,17 @@
 <% end %>
 
 <div id="island">
-  <span class="toggable" style="display:none">
-    <%= link_to "<- Done. Back to Internetiquette", root_path %>
-  </span>
-  <span class="toggable">
-    Loading.....(the preview may mess things up)
-  </span>
-
+  <h2>
+    <%= link_to "<- Back to Internetiquette", root_path %>
+  </h2>
+  <span>
+    <span class="toggable" style="display:none">
+      Finished:
+    </span>
+    <span class="toggable">
+      Loading: 
+    </span>
+   <%= @url %>  <%#(the preview may mess things up)%></span>
 </div>
 <iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" height="1000px" width="100%" onload='javascript:resizeIframe_and_clean(this);'>
 </iframe>
