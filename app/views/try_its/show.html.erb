@@ -3,6 +3,7 @@
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
     document.getElementById('try-it-example').contentWindow.clean = window.clean;
     document.getElementById('try-it-example').contentWindow.clean();
+    $("#island .toggable").toggle();
   }
 
   function clean() {
@@ -36,7 +37,13 @@
 <% end %>
 
 <div id="island">
-  <%= link_to "<- Back to Internetiquette", root_path %>
+  <span class="toggable" style="display:none">
+    <%= link_to "<- Back to Internetiquette", root_path %>
+  </span>
+  <span class="toggable">
+    Loading.....
+  </span>
+
 </div>
 <iframe id="try-it-example" src="<%= source_try_it_path(:url => @url) %>" frameBorder="0" height="1000px" width="100%" onload='javascript:resizeIframe_and_clean(this);'>
 </iframe>

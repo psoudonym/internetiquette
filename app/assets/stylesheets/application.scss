@@ -382,6 +382,7 @@ body#try_it {
   border: none;
   #island {
     background-color: $red;
+    color: $off-white;
     @extend h2;
     a {
       color: $off-white;
